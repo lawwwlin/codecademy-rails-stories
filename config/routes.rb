@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root 'pages#home'
   get '/about' => 'about#about'
   resources :signups
+  get '/thanks' => 'pages#thanks'
 end
