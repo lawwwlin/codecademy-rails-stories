@@ -24,60 +24,53 @@ html, body {
   background-position: center; 
 }
 
-.nav {
-  margin: 0;
-  padding: 20px 0;
-}
-
-.nav li {
-  color: #fff;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 600;
-  font-size: 12px;
-  display: inline;
-}
-
-#button {
-  cursor:pointer;
-}
-
-#menu, #right {
-  display:inline;
-}
-
-#menu li a {
-  padding: 10px;
-  display: block;
-  color: white;
-  text-decoration: none;
-}
-
-#right {
-  width:100%;
-  background-color: #fff;
-  z-index: 5;
+.menu {
+  background-color: transparent;
   position: fixed;
-  left: 0px;
+  cursor: pointer;
+  top: 20px;
+  left: 50px;
+  font-size: 30px;
+  z-index: 1;
+}
+
+.sidenav {
   height: 100%;
-  -webkit-box-shadow:  -5px 0px 4px 0px rgba(0, 0, 0, 0.2);
-      moz-box-shadow:  -5px 0px 4px 0px rgba(0, 0, 0, 0.2);
-        o-box-shadow:  -5px 0px 4px 0px rgba(0, 0, 0, 0.2);
-          box-shadow:  -5px 0px 4px 0px rgba(0, 0, 0, 0.2);
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
 
-#right p {
-  padding: 10px;
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
 }
 
-#menu {
-  float:left;
-  width: 350px;
-  height: 100%;
+.sidenav a:hover {
+  color: #f1f1f1;
 }
 
-#menu li {
-  background-color:#444;
-  border-bottom: 1px solid #888;
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
 
 
